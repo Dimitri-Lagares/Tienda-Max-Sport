@@ -6,7 +6,6 @@
   },
   "scripts": {
     "start": "node ./src/app.js"
-    // "sql": "sqlcmd -S myServer\instanceName -i C:\myScript. sql."
   },
   "name": "proyecto-integrador-back",
   "version": "1.0.0",
