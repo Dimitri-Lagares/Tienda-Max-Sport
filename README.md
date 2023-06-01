@@ -1,2 +1,2 @@
 # Tienda Max Sport
-#Hola esto es una prueba
+Pagina Web en la cual se realiza el envio de PQRs, a un backend el cual guarda la informacion en MySQL para poder ejecutar el proyecto debe de escribir en su terminal git clone https://github.com/Dimitri-Lagares/Tienda-Max-Sport.git esto clonara una copia de este repositorio a su maquina local alli debe de entrar primero a la carpeta Tienda-Max-Sport-Back con el comando cd Tienda-Max-Sport-Back luego ejecutar npm i al terminar la instalacion debe de escribir npm run start, con ello ya tendra el backend corriendo, luego va a encontrar entre los archivos un archivo db.sql el cual por dentro contiene la informacion para crear la base de datos
