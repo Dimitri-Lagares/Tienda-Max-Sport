@@ -1,22 +1,36 @@
-import EnhancedTable from './components/EnhancedTable'
-import IconLabelButtons from './components/IconLabelButtons'
-import FormPropsTextFields from './components/FormPropsTextFields'
-import SelectOtherProps from './components/SelectOtherProps'
-import CountrySelect from './components/CountrySelect'
-import DepartmentSelect from './components/DepartmentSelect'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Pqr from './pages/Pqr'
 
-import './App.css'
 
-function App() {
+var isAllowed = true
+let previousTitle = document.title
 
+window.addEventListener('blur', () => {
+  previousTitle = document.title
+  document.title = 'Aqui te esperamos! 😏Vuelve😀'
+})
+
+window.addEventListener('focus', () => {
+  document.title = previousTitle })
+
+const functionToGetchildData = (validateRouteLogin) => {
+  if (validateRouteLogin === ''){
+    isAllowed=true
+  } else {
+    isAllowed=false
+  }
+}
+
+const App = () => {
   return (
     <>
-      <EnhancedTable/>
-      <IconLabelButtons/>
-      <FormPropsTextFields/>
-      <SelectOtherProps/>
-      <CountrySelect/>
-      <DepartmentSelect/>
+    <BrowserRouter>
+        <Routes>
+            <Route index element={<Home/>}/>
+            <Route path='pqr' element={<Pqr/>}/>
+        </Routes>
+    </BrowserRouter>
     </>
   )
 }
