@@ -1,9 +1,10 @@
 import React from 'react'
+import EnhancedTable from '../components/EnhancedTable'
 
 const Pqr = () => {
   return (
-    <div>Pqr</div>
-  )
+    <EnhancedTable/>
+    )
 }
 
 export default Pqr

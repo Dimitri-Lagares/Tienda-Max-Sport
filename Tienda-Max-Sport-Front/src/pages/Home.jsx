@@ -1,4 +1,3 @@
-import EnhancedTable from '../components/EnhancedTable'
 import IconLabelButtons from '../components/IconLabelButtons'
 import FormPropsTextFields from '../components/FormPropsTextFields'
 import SelectOtherProps from '../components/SelectOtherProps'
@@ -10,7 +9,6 @@ function Home() {
 
   return (
     <>
-      <EnhancedTable/>
       <IconLabelButtons/>
       <FormPropsTextFields/>
       <SelectOtherProps/>
