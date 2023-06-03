@@ -21,6 +21,7 @@ import Switch from '@mui/material/Switch';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
+import { useState } from 'react';
 
 function createData(name, calories, fat, carbs, protein) {
   return {
@@ -225,6 +226,18 @@ EnhancedTableToolbar.propTypes = {
 };
 
 export default function EnhancedTable() {
+  
+    const [data, setData] = useState([]);
+
+  const getData = async () => {
+    try{
+      const {data: response} = await axios.get(`http://localhost:3055/pqr's-list`)
+      setData(response)
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+  
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('calories');
   const [selected, setSelected] = React.useState([]);
