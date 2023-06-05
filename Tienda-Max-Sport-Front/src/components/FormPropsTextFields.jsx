@@ -31,6 +31,7 @@ export default function FormPropsTextFields() {
         {
           fields.map((field, index) => (
             <TextField
+              key={index}
               required={field.required}
               id="outlined-required"
               label={field.label}
