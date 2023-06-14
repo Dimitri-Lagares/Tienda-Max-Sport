@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 export default function FormPropsTextFields({ required, label, type, placeholder, helperText }) {
   const [field, setField] = useState("amarillos")
-  console.log( field == "amarillo" ? "si" : "no");
+  // console.log( field == "amarillo" ? "si" : "no");
 
   return (
     <Box
